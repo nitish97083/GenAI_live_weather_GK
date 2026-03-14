@@ -1,0 +1,6 @@
+<div class="facts-container">
+  <h2>General Knowledge Fact</h2>
+  <div *ngIf="loading" class="loading">Loading fact...</div>
+  <div *ngIf="!loading && fact" class="fact">{{ fact }}</div>
+  <button (click)="getFact()" [disabled]="loading">Get New Fact</button>
+</div>
